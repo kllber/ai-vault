@@ -2,7 +2,10 @@ import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "node:url";
+import { readFileSync } from "node:fs";
 import { createAivaultApi } from "./server/aivault-api.mjs";
+
+const pkg = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8"));
 
 /**
  * 本地查询代理中间件（开发 / 预览模式用）。
@@ -28,6 +31,7 @@ function aivaultProxy(): Plugin {
 
 export default defineConfig({
   base: "./",
+  define: { __APP_VERSION__: JSON.stringify(pkg.version) },
   plugins: [react(), tailwindcss(), aivaultProxy()],
   resolve: {
     alias: {

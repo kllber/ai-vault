@@ -20,6 +20,7 @@ import {
   SearchX,
   Terminal,
   Power,
+  Info,
 } from "lucide-react";
 import { Background } from "@/components/Background";
 import { Sidebar, type NavId, type Scope } from "@/components/Sidebar";
@@ -2062,6 +2063,30 @@ function SettingsView({
         >
           清空金库
         </button>
+      </div>
+
+      <div className="glass rounded-2xl p-5">
+        <div className="flex items-center gap-2 text-[13.5px] font-semibold">
+          <Info size={16} className="text-[#b9aaff]" /> 关于
+        </div>
+        <div className="mt-2 space-y-1 text-[12.5px]">
+          <div>
+            <span className="font-medium text-ink-100">AI Vault · 密钥金库</span>{" "}
+            <span className="font-mono text-ink-300">v{__APP_VERSION__}</span>
+          </div>
+          <div className="text-[11.5px] text-ink-500">本地优先、端到端加密的 AI API 密钥管理工具。</div>
+          <div className="text-[11.5px] text-ink-500">开源许可：Apache License 2.0 · © 2026 kllber</div>
+          <div className="pt-1 text-[11.5px]">
+            <a
+              href="https://github.com/kllber/ai-vault"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#b9aaff] underline"
+            >
+              github.com/kllber/ai-vault
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 {
   "name": "ai-vault",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "本地优先、端到端加密的 AI API 密钥管理工具",
-  "author": "AI Vault",
+  "author": "kllber",
   "type": "module",
   "main": "electron/main.cjs",
   "scripts": {
@@ -41,6 +41,7 @@
   "build": {
     "appId": "com.aivault.desktop",
     "productName": "AI Vault",
+    "copyright": "Copyright © 2026 kllber",
     "asar": false,
     "directories": {
       "output": "release",

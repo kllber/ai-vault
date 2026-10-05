@@ -34,6 +34,21 @@
 
 ---
 
+## ✨ 主要特性
+
+- **加密保管**：AES-256-GCM 加密，密钥由金库密码经 Argon2id（64 MiB / 3 轮）派生；明文只在解锁后的内存里。
+- **层级建模**：`厂商 → 账号 → 密钥`、`软件 → 项目`，用「主用 / 备用」绑定。
+- **余额 / 花费**：DeepSeek、Moonshot、OpenRouter、硅基流动直接查；OpenAI / Anthropic 用「管理密钥」查本月花费；通义千问走官方 CLI（可一键安装登录）。
+- **有效性检测**：逐把 key 调免费接口判断是否失效。
+- **余额快照 / 趋势**：只在余额变化时记录，能看真实曲线、日消耗、预计可用天数。
+- **文件即金库**：金库就是一个 `.aivault` 文件（类似 PSD），改动**立即写盘**，关软件前再保存一次。
+- **手机可用**：内置本地服务，手机浏览器连同一 WiFi 即可用；配合 Tailscale 可跨网络（异地）访问。
+- **后台运行 / 开机自启**：关窗收进右下角托盘继续跑；设置里可开关开机自启。
+- **`.aivault` 文件图标**：双击即可用本软件打开。
+- **便携**：免安装文件夹版，拷到任意 Windows 电脑即可运行。
+
+---
+
 ## 🖥 概览 · 一站式看板
 
 <p align="center"><img src="assets/screenshot-overview.png" alt="概览" width="90%" /></p>
@@ -54,10 +69,14 @@
 
 ## 🔎 密钥详情 · 账号、余额与使用位置
 
-<p align="center"><img src="assets/screenshot-detail.png" alt="密钥详情" width="30%" /></p>
+<p align="center">
+  <img src="assets/screenshot-detail.png" alt="密钥详情" width="24%" />
+  <img src="assets/screenshot-balance.png" alt="余额变化明细" width="70%" />
+</p>
 
 点开任意密钥 → 右侧抽屉：**所属账号**、同一账号下的其他密钥、**账号余额**（同账号共用）、
-**余额变化曲线**（真实采样）、以及「检测有效性 / 编辑 / 删除」。
+**余额变化曲线**（真实采样）、以及「检测有效性 / 编辑 / 删除」。点曲线还能打开**余额变化明细**
+（大图 + 每次采样的「时间 / 余额 / 变化」表格）。
 
 ---
 
@@ -73,26 +92,14 @@
 ## 📱 手机端 · 手机浏览器即可用
 
 <p align="center">
-  <img src="assets/screenshot-mobile-lock.png" alt="手机锁屏" width="22%" />
-  <img src="assets/screenshot-mobile.png" alt="手机主界面" width="24%" />
+  <img src="assets/screenshot-mobile-lock.png" alt="手机锁屏" width="23%" />
+  <img src="assets/screenshot-mobile-overview.png" alt="手机概览" width="23%" />
+  <img src="assets/screenshot-mobile.png" alt="手机密钥库" width="23%" />
+  <img src="assets/screenshot-mobile-projects.png" alt="手机软件与项目" width="23%" />
 </p>
 
 桌面版**内置本地服务**：手机浏览器连同一个 WiFi 打开即可用全部功能，电脑与手机**共用同一份**数据
 （密码仍在手机端解密）。配合 **Tailscale**（免费）还能**跨网络、异地**访问；支持「添加到主屏幕」当 App 用。
-
----
-
-## ✨ 主要特性
-
-- **加密保管**：AES-256-GCM 加密，密钥由金库密码经 Argon2id（64 MiB / 3 轮）派生；明文只在解锁后的内存里。
-- **层级建模**：`厂商 → 账号 → 密钥`、`软件 → 项目`，用「主用 / 备用」绑定。
-- **余额 / 花费**：DeepSeek、Moonshot、OpenRouter、硅基流动直接查；OpenAI / Anthropic 用「管理密钥」查本月花费；通义千问走官方 CLI（可一键安装登录）。
-- **有效性检测**：逐把 key 调免费接口判断是否失效。
-- **余额快照 / 趋势**：只在余额变化时记录，能看真实曲线、日消耗、预计可用天数。
-- **文件即金库**：金库就是一个 `.aivault` 文件（类似 PSD），改动**立即写盘**，关软件前再保存一次。
-- **后台运行 / 开机自启**：关窗收进右下角托盘继续跑；设置里可开关开机自启。
-- **`.aivault` 文件图标**：双击即可用本软件打开。
-- **便携**：免安装文件夹版，拷到任意 Windows 电脑即可运行。
 
 ---
 

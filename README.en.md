@@ -36,6 +36,21 @@ uploaded.
 
 ---
 
+## ✨ Features
+
+- **Encrypted storage** — AES-256-GCM with an Argon2id-derived key (64 MiB / 3 passes); plaintext keys only in memory while unlocked.
+- **Hierarchical model** — `Provider → Account → Key`, usage side `Software → Project`, linked with `primary / backup` roles.
+- **Balance & spend** — DeepSeek / Moonshot / OpenRouter / SiliconFlow directly; OpenAI / Anthropic via an Admin key; Qwen (通义千问) via its official CLI.
+- **Validity checks** — probe each key against a free endpoint.
+- **Balance snapshots** — recorded only when the balance changes, so trends and burn-rate are real.
+- **The vault is a file** — one `.aivault` file (PSD-like), written immediately and again before exit.
+- **Mobile friendly** — a built-in local service lets a phone browser connect over LAN, or anywhere via Tailscale.
+- **Background / launch at login** — closing the window minimizes to the tray; autostart toggle in Settings.
+- **File icon** — double-click a `.aivault` to open it in the app.
+- **Portable** — an unzipped folder runs on any Windows PC.
+
+---
+
 ## 🖥 Overview · one dashboard for everything
 
 <p align="center"><img src="assets/screenshot-overview.png" alt="Overview" width="90%" /></p>
@@ -55,13 +70,17 @@ daily burn, and estimated days left**, with one-click copy (**the clipboard is c
 
 ---
 
-## 🔎 Key detail · account, balance and where it is used
+## 🔎 Key detail · account, balance and usage
 
-<p align="center"><img src="assets/screenshot-detail.png" alt="Key detail" width="30%" /></p>
+<p align="center">
+  <img src="assets/screenshot-detail.png" alt="Key detail" width="24%" />
+  <img src="assets/screenshot-balance.png" alt="Balance history" width="70%" />
+</p>
 
 Click any key → a side panel with the **owning account**, the other keys in that account, the
 **account balance** (shared within the account), a **real balance-history chart**, and
-**check validity / edit / delete**.
+**check validity / edit / delete**. Clicking the chart opens the **balance-history detail** (large chart
+plus a per-sample “time / balance / change” table).
 
 ---
 
@@ -77,28 +96,16 @@ Grouped by `Software → Project`: which projects each software has, and which k
 ## 📱 Mobile · just a phone browser
 
 <p align="center">
-  <img src="assets/screenshot-mobile-lock.png" alt="Mobile lock screen" width="22%" />
-  <img src="assets/screenshot-mobile.png" alt="Mobile" width="24%" />
+  <img src="assets/screenshot-mobile-lock.png" alt="Mobile lock screen" width="23%" />
+  <img src="assets/screenshot-mobile-overview.png" alt="Mobile overview" width="23%" />
+  <img src="assets/screenshot-mobile.png" alt="Mobile keys" width="23%" />
+  <img src="assets/screenshot-mobile-projects.png" alt="Mobile projects" width="23%" />
 </p>
 
 The desktop app ships a **built-in local service**: open it from a phone browser on the same Wi-Fi and
 you get the full UI, sharing the **same data** with the desktop (the password is still decrypted on the
 phone). With **Tailscale** (free) it also works **across networks / remotely**. Supports
 "Add to Home Screen".
-
----
-
-## ✨ Features
-
-- **Encrypted storage** — AES-256-GCM with an Argon2id-derived key (64 MiB / 3 passes); plaintext keys only in memory while unlocked.
-- **Hierarchical model** — `Provider → Account → Key`, usage side `Software → Project`, linked with `primary / backup` roles.
-- **Balance & spend** — DeepSeek / Moonshot / OpenRouter / SiliconFlow directly; OpenAI / Anthropic via an Admin key; Qwen (通义千问) via its official CLI.
-- **Validity checks** — probe each key against a free endpoint.
-- **Balance snapshots** — recorded only when the balance changes, so trends and burn-rate are real.
-- **The vault is a file** — one `.aivault` file (PSD-like), written immediately and again before exit.
-- **Background / launch at login** — closing the window minimizes to the tray; autostart toggle in Settings.
-- **File icon** — double-click a `.aivault` to open it in the app.
-- **Portable** — an unzipped folder runs on any Windows PC.
 
 ---
 

@@ -1,0 +1,24 @@
+# 依赖与构建产物
+node_modules/
+dist/
+release/
+分发版本/
+*.tsbuildinfo
+
+# 运行时数据 / 金库数据（绝不上传）
+/data/
+/server/.data/
+*.aivault
+*.aivault.bak-*
+
+# 内部文档（仅本地）
+维护约定.md
+P3-规划.md
+
+# 私有文件夹（用户明确：不参与开发与仓库上传）
+此文件夹AI不要打开，为私密文件夹，不参与开发与仓库上传/
+
+# 杂项
+*.log
+.DS_Store
+Thumbs.db

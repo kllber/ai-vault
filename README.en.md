@@ -26,7 +26,7 @@ A **local-first, end-to-end encrypted** manager for AI API keys. Keep keys from 
 single encrypted `.aivault` file, and see at a glance **which project uses which key, whether it still
 works, and how much balance is left**.
 
-Data stays **on your machine** (or in your own vault file). The vault password is stretched with
+Data stays on your machine (or in your own vault file). The vault password is stretched with
 **Argon2id** and data is encrypted with **AES-256-GCM**; plaintext keys never touch disk and are never
 uploaded.
 
@@ -36,18 +36,55 @@ uploaded.
 
 ---
 
-## 🖼 Screenshots
+## 🖥 Overview · one dashboard for everything
+
+<p align="center"><img src="assets/screenshot-overview.png" alt="Overview" width="90%" /></p>
+
+Stat cards (total keys / valid / expiring / balance in CNY), a **needs-attention** list (membership
+expiry, invalid or expiring keys), and a **per-account balance overview**. Every number comes from real
+queries — no fake data.
+
+---
+
+## 🔑 Keys · copy and inspect anytime
+
+<p align="center"><img src="assets/screenshot-keys.png" alt="Keys" width="90%" /></p>
+
+Grid or list view, filter/search by provider, account or status. Each card shows the **account balance,
+daily burn, and estimated days left**, with one-click copy (**the clipboard is cleared after 30s**).
+
+---
+
+## 🔎 Key detail · account, balance and where it is used
+
+<p align="center"><img src="assets/screenshot-detail.png" alt="Key detail" width="30%" /></p>
+
+Click any key → a side panel with the **owning account**, the other keys in that account, the
+**account balance** (shared within the account), a **real balance-history chart**, and
+**check validity / edit / delete**.
+
+---
+
+## 🗂 Software & Projects · see where each key is used
+
+<p align="center"><img src="assets/screenshot-projects.png" alt="Software & Projects" width="90%" /></p>
+
+Grouped by `Software → Project`: which projects each software has, and which keys (as
+**primary / backup**) each project is using. You can search and bind keys right from the project editor.
+
+---
+
+## 📱 Mobile · just a phone browser
 
 <p align="center">
-  <img src="assets/screenshot-overview.png" alt="Overview" width="49%" />
-  <img src="assets/screenshot-keys.png" alt="Keys" width="49%" />
+  <img src="assets/screenshot-mobile-lock.png" alt="Mobile lock screen" width="22%" />
+  <img src="assets/screenshot-mobile.png" alt="Mobile" width="24%" />
 </p>
-<p align="center">
-  <img src="assets/screenshot-projects.png" alt="Software & Projects" width="74%" />
-</p>
-<p align="center">
-  <img src="assets/screenshot-detail.png" alt="Key detail" width="30%" />
-</p>
+
+The desktop app ships a **built-in local service**: open it from a phone browser on the same Wi-Fi and
+you get the full UI, sharing the **same data** with the desktop (the password is still decrypted on the
+phone). With **Tailscale** (free) it also works **across networks / remotely**. Supports
+"Add to Home Screen".
 
 ---
 
@@ -58,11 +95,12 @@ uploaded.
 - **Balance & spend** — DeepSeek / Moonshot / OpenRouter / SiliconFlow directly; OpenAI / Anthropic via an Admin key; Qwen (通义千问) via its official CLI.
 - **Validity checks** — probe each key against a free endpoint.
 - **Balance snapshots** — recorded only when the balance changes, so trends and burn-rate are real.
-- **The vault is a file** — one `.aivault` file (PSD-like), written immediately, and again before exit.
-- **Mobile friendly** — a built-in local service lets a phone browser connect over LAN, or anywhere via Tailscale.
+- **The vault is a file** — one `.aivault` file (PSD-like), written immediately and again before exit.
 - **Background / launch at login** — closing the window minimizes to the tray; autostart toggle in Settings.
 - **File icon** — double-click a `.aivault` to open it in the app.
 - **Portable** — an unzipped folder runs on any Windows PC.
+
+---
 
 ## ⬇️ Download
 

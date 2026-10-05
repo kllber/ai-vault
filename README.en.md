@@ -36,6 +36,15 @@ uploaded.
 
 ---
 
+## 🖼 Screenshots
+
+<p align="center">
+  <img src="assets/screenshot-overview.png" alt="Overview" width="49%" />
+  <img src="assets/screenshot-keys.png" alt="Keys" width="49%" />
+</p>
+
+---
+
 ## ✨ Features
 
 - **Encrypted storage** — AES-256-GCM with an Argon2id-derived key (64 MiB / 3 passes); plaintext keys only in memory while unlocked.

@@ -34,6 +34,15 @@
 
 ---
 
+## 🖼 界面预览
+
+<p align="center">
+  <img src="assets/screenshot-overview.png" alt="概览 · Overview" width="49%" />
+  <img src="assets/screenshot-keys.png" alt="密钥库 · Keys" width="49%" />
+</p>
+
+---
+
 ## ✨ 功能
 
 - **加密保管**：密钥用 AES-256-GCM 加密，密钥由金库密码经 Argon2id（64 MiB / 3 轮）派生；明文只在解锁后的内存里。

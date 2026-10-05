@@ -42,6 +42,12 @@ uploaded.
   <img src="assets/screenshot-overview.png" alt="Overview" width="49%" />
   <img src="assets/screenshot-keys.png" alt="Keys" width="49%" />
 </p>
+<p align="center">
+  <img src="assets/screenshot-projects.png" alt="Software & Projects" width="74%" />
+</p>
+<p align="center">
+  <img src="assets/screenshot-detail.png" alt="Key detail" width="30%" />
+</p>
 
 ---
 

@@ -40,6 +40,12 @@
   <img src="assets/screenshot-overview.png" alt="概览 · Overview" width="49%" />
   <img src="assets/screenshot-keys.png" alt="密钥库 · Keys" width="49%" />
 </p>
+<p align="center">
+  <img src="assets/screenshot-projects.png" alt="软件与项目 · Software & Projects" width="74%" />
+</p>
+<p align="center">
+  <img src="assets/screenshot-detail.png" alt="密钥详情 · Key detail" width="30%" />
+</p>
 
 ---
 
